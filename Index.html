@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('I2FDjATEVj1-akPPu');
+        })();
+    </script>
+    <title>Projeto Sem Limites</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <center><br><br><br>
+            <h2>Contato</h2>
+            <form id="contato_form">
+                <label><strong>Name: </strong></label>
+                <input type="text" id="name" name="user_name" required placeholder="EX: ARI TO NEM AI"><br><br>
+
+                <label><strong>Email: </strong></label>
+                <input type="email" id="email" name="user_email" required
+                    placeholder="EX: AriToNemAi@irineu.com"><br><br>
+
+                <label><strong>Mensagem: </strong></label>
+                <textarea id="mensagem" name="user_mensagem" required placeholder="SOLTA A VOZ MEU CONSAGRADO" rows="3"
+                    cols="20"></textarea><br><br>
+
+                <button type="submit"><strong>Enviar</strong></button>
+
+                <strong>
+                    <p id="response"></p>
+                </strong>
+
+            </form>
+        </center>
+    </div>
+
+    <script>
+        const form = document.getElementById('contato_form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_zkrnw05', 'template_5ni8if6', this)
+
+                .then(function (response) {
+                    document.getElementById('response').innerText = 'tudo certo por aqui';
+                    form.reset();
+                }, function (error) {
+                    document.getElementById('response').innerText = 'Erro...Algo deu errado';
+                })
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!-- template: "template_5ni8if6"
+KeyApi: "I2FDjATEVj1-akPPu"
+ServiceId: "service_zkrnw05" -->
+<!-- {
+user_name
+user_email
+user_mensagem
+} -->
