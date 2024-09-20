@@ -14,7 +14,8 @@ textarea {
 /* -------------------------------------- */
 /* estilização dos inputs */
 .input {
-  background-color: #212121;
+  background-color: #585858;
+  color: rgb(0, 255, 255);
   max-width: 190px;
   height: 40px;
   padding: 10px;
@@ -37,6 +38,18 @@ textarea {
   color: rgb(0, 255, 255);
 }
 
+#phone {
+  outline: 0;
+}
+
+#phone:valid {
+  border-color: green;
+}
+
+#phone:focus:invalid {
+  border-color: red;
+}
+
 /* -------------------------------------- */
 
 /* estilização dos cards */
@@ -56,6 +69,10 @@ textarea {
 
 .cards .green {
   background-color: #22c55e;
+}
+
+.cards .blue2 {
+  background-color: #474bff;
 }
 
 .cards .card {

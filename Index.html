@@ -24,18 +24,25 @@
                     <label class="tip"><strong>Name: </strong></label><br>
                     <input class="second-text input" type="text" id="name" name="user_name" required
                         placeholder="EX: ARI TO NEM AI"><br>
-                </div><br><br><br>
+                </div><br><br>
 
                 <div class="card blue"><br><br>
                     <label class="tip"><strong>Email: </strong></label><br>
                     <input class="second-text input" type="email" id="email" name="user_email" required
                         placeholder="EX: AriToNemAi@irineu.com"><br></br>
-                </div><br><br><br>
+                </div><br><br>
+
+                <div class="card blue2"><br><br>
+                    <label for="phone" class="tip"><strong>Telefone:</strong></label>
+                    <input class="second-text input" type="number" id="phone" name="user_phone"
+                        placeholder="(99)12345-6789" min="0" maxlength="14" required><br></br>
+                </div><br><br>
 
                 <div class="card green">
                     <label class="tip"><strong>Mensagem: </strong></label>
                     <textarea class="input" id="mensagem" name="user_mensagem" required
-                        placeholder="SOLTA A VOZ MEU CONSAGRADO"></textarea>
+                        placeholder="SOLTA A VOZ MEU CONSAGRADO" maxlength="500"></textarea>
+                    <!--maxlength="" limita a quantos caracteres o usuario pode digitar evitando estrapolação de conteudo-->
                 </div><br><br>
                 <button type="submit"><strong>Enviar</strong></button>
 
